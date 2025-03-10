@@ -70,3 +70,19 @@ id:number,
 type:string
 
 }
+
+class Sellable<T>{
+
+    public cart : T[]=[]
+
+addTOCart(Product:T){
+
+    this.cart.push(Product)
+}
+}
+
+const quizCart = new Sellable<Quiz>(); // T = Quiz
+
+quizCart.addTOCart({ name: "Math Quiz", id: 1, type: "MCQ" });
+
+console.log(quizCart.cart);
